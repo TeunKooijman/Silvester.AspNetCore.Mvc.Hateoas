@@ -20,7 +20,7 @@ The `Silvester.AspNetCore.Mvc.Hateoas.Extensions` namespace contains `Controller
 public IActionResult GetUser([FromRoute] Guid userId)
 {
 	User user = GetUserFromSomewhere(userId);
-    return this.HateoasResource(user, hateoas => 
+	return this.HateoasResource(user, hateoas => 
 	{
 		hateoas.Links.AddLink("self", nameof(GetUser), new {userId});
 		hateoas.Links.AddLink("roles", nameof(GetRoles), new {userId});
