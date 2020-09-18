@@ -1,4 +1,8 @@
 ## Silvester.AspNetCore.Mvc.Hateoas
+`Install-Package Silvester.AspNetCore.Mvc.Hateoas`
+
+![.NET Core](https://github.com/TeunKooijman/Silvester.AspNetCore.Mvc.Hateoas/workflows/.NET%20Core/badge.svg)
+
 This library contains utilities and extensions for working with `Hypermedia As The Engine Of Application State` (`HATEOAS`) in `AspNetCore MVC`. In its current form it distinguishes three entities:
 - HateoasLink
 - HateoasResource
