@@ -6,6 +6,7 @@ namespace Silvester.AspNetCore.Mvc.Hateoas.Models.Resource
     public interface IHateoasResourceBuilderFactory
     {
         IHateoasResourceBuilder<TResource> Create<TResource>();
+        IHateoasResourceBuilder<TResource, TEntity> Create<TResource, TEntity>();
     }
 
     public class HateoasResourceBuilderFactory : IHateoasResourceBuilderFactory
@@ -20,6 +21,11 @@ namespace Silvester.AspNetCore.Mvc.Hateoas.Models.Resource
         public IHateoasResourceBuilder<TResource> Create<TResource>()
         {
             return ActivatorUtilities.CreateInstance<HateoasResourceBuilder<TResource>>(Services);
+        }
+
+        public IHateoasResourceBuilder<TResource, TEntity> Create<TResource, TEntity>()
+        {
+            return ActivatorUtilities.CreateInstance<HateoasResourceBuilder<TResource, TEntity>>(Services);
         }
     }
 }
